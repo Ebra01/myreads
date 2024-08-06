@@ -8,7 +8,7 @@ const ChangeCategory = ({ book, changeCategory }) => {
 
   return (
     <div className="book-shelf-changer">
-      <select onChange={handleCategory} defaultValue={book.shelf}>
+      <select onChange={handleCategory} defaultValue={book.shelf || "none"}>
         <option value="none" disabled>
           Move to...
         </option>

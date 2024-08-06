@@ -1,46 +1,16 @@
 import "../static/App.css";
 import BooksList from "./Books/BooksList";
+import {Routes, Route} from "react-router-dom"
+import SearchBooks from "./Search/SearchBooks";
 
 function App() {
 
   return (
-    <div className="app">
-      <BooksList />
-    </div>
+    <Routes className="app">
+      <Route exact path="/" element={<BooksList />}/>
+      <Route exact path="/search" element={<SearchBooks />}/>
+    </Routes>
   );
 }
 
 export default App;
-
-
-/*
-
-<div className="app">
-  {showSearchPage ? (
-    <div className="search-books">
-      <div className="search-books-bar">
-        <button
-          className="close-search"
-          onClick={() => setShowSearchpage(!showSearchPage)}
-        >
-          Close
-        </button>
-        <div className="search-books-input-wrapper">
-          <input
-            type="text"
-            placeholder="Search by title, author, or ISBN"
-          />
-        </div>
-      </div>
-      <div className="search-books-results">
-        <ol className="books-grid"></ol>
-      </div>
-    </div>
-  ) : (
-      <div className="open-search">
-        <button onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</button>
-      </div>
-  )}
-</div>
-
-*/

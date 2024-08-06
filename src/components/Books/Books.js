@@ -5,7 +5,7 @@ const Books = ({ books, changeCategory }) => {
   return (
     <ol className="books-grid">
       {
-        books.map(book => (
+        books.length > 0 && books.map(book => (
           <li key={book.id}>
             <div className="book">
               <div className="book-top">
