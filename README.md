@@ -47,7 +47,7 @@ To get started with the application:
 ```
 ## Pages
 
-#### <Home Page/>
+<Home Page/>
 
 Displays your collection of books in Three shelves:
 - Currently Reading
@@ -55,7 +55,7 @@ Displays your collection of books in Three shelves:
 - Read
 You can also move books to different shelves.
 
-#### <Search Page/>
+<Search Page/>
 
 Allows you to search for books and add them to your bookshelf.
 ## Backend Server
