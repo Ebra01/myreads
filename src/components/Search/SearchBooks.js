@@ -39,6 +39,9 @@ const SearchBooks = () => {
    * @param {string} shelf - The new shelf category
    */
   const setCategory = async (book, shelf) => {
+    if (shelf === "none") {
+      return;
+    }
     await BooksAPI.update(book, shelf);
     book.shelf = shelf;
     setQ(qBooks.filter(b => b.id !== book.id));
